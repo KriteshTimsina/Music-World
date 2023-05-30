@@ -3,14 +3,14 @@ import axios from "axios";
 export default async function getAlbums(page: number) {
   const options = {
     method: "GET",
-    url: process.env.baseURL + "/chart/albums/",
+    url: process.env.NEXT_PUBLIC_BASE_URL + "/chart/albums/",
     params: {
       per_page: "10",
       page: page.toString(),
     },
     headers: {
-      "X-RapidAPI-Key": process.env.KEY,
-      "X-RapidAPI-Host": process.env.HOST,
+      "X-RapidAPI-Key": process.env.NEXT_PUBLIC_API_KEY,
+      "X-RapidAPI-Host": process.env.NEXT_PUBLIC_API_HOST,
     },
   };
 

@@ -3,15 +3,15 @@ import axios from "axios";
 export async function searchAlbums(query: string) {
   const options = {
     method: "GET",
-    url: process.env.baseURL + "/search/multi/",
+    url: process.env.NEXT_PUBLIC_BASE_URL + "/search/multi/",
     params: {
       q: query,
       per_page: "5",
       page: "1",
     },
     headers: {
-      "X-RapidAPI-Key": process.env.KEY,
-      "X-RapidAPI-Host": process.env.HOST,
+      "X-RapidAPI-Key": process.env.NEXT_PUBLIC_API_KEY,
+      "X-RapidAPI-Host": process.env.NEXT_PUBLIC_API_HOST,
     },
   };
 

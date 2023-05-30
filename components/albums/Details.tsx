@@ -69,9 +69,7 @@ const Details = ({ data }: { data: any }) => {
         <div className="cursor-pointer fixed bottom-0 md:ml-10 bg-slate-100 flex gap-4 w-screen md:w-[50vw] justify-center h-16 items-center translate-x-0 transition-transform ">
           <BsShuffle />
           <BiSkipPrevious size={30} />
-
           <BsFillPauseCircleFill size={50} />
-
           <BiSkipNext size={30} />
           <RxLoop />
         </div>
