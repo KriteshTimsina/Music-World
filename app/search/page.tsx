@@ -12,13 +12,13 @@ const page = () => {
     e.preventDefault();
     setSearchedData(query);
   }
-  console.log(searchedData);
 
   useEffect(() => {
     async function getAlbums() {
       const data = await searchAlbums(searchedData);
       setAlbums(data);
     }
+
     getAlbums();
   }, [searchedData]);
 

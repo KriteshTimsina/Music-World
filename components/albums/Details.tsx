@@ -56,11 +56,7 @@ const Details = ({ data }: { data: any }) => {
       </div>
 
       <div className="m-10 w-[90vw] md:w-[50vw] mb-20">
-        <SongDisplay
-          songs={songs}
-          setShowMusicBar={setShowMusicBar}
-          handlePlayMusic={handlePlayMusic}
-        />
+        <SongDisplay songs={songs} handlePlayMusic={handlePlayMusic} />
       </div>
       {showMusicBar && (
         <div className="cursor-pointer fixed bottom-0 md:ml-10 bg-slate-100 flex gap-4 w-screen md:w-[50vw] justify-center h-16 items-center">

@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import React, { useState } from "react";
 import { AiOutlineFire } from "react-icons/ai";

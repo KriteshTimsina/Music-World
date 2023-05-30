@@ -8,6 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Music World",
   icons: "/icon-a.png",
+  description: "Music and heart should never stop.",
 };
 
 export default function RootLayout({

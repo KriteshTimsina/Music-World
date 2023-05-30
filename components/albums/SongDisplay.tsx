@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import { BsPlay } from "react-icons/bs";
-const SongDisplay = ({ songs, setShowMusicBar, handlePlayMusic }) => {
+const SongDisplay = ({
+  songs,
+
+  handlePlayMusic,
+}: {
+  songs: any;
+
+  handlePlayMusic: any;
+}) => {
   return (
     <table className="  w-full text-sm text-left text-gray-500 ">
       <thead className="text-xs text-gray-900 uppercase ">
@@ -46,7 +54,11 @@ const SongDisplay = ({ songs, setShowMusicBar, handlePlayMusic }) => {
                   {song.title}
                 </th>
                 <td className="px-6 py-4">{song.artist_names}</td>
-                <td className="px-6 py-4">{song.release_date_for_display}</td>
+                <td className="px-6 py-4 ">
+                  {song.release_date_for_display
+                    ? song.release_date_for_display
+                    : "-"}
+                </td>
               </tr>
             </tbody>
           );

@@ -1,5 +1,3 @@
-"use client";
-
 import Albums from "@/components/home/Albums";
 import getAlbums from "@/lib/getAlbums";
 
