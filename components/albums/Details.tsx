@@ -19,7 +19,7 @@ const Details = ({ data }: { data: any }) => {
 
   function handlePlayMusic(e: any) {
     e.preventDefault();
-    setShowMusicBar(true);
+    setShowMusicBar(!showMusicBar);
   }
   return (
     <div className="flex flex-col items-center md:items-start px-10">
@@ -49,7 +49,14 @@ const Details = ({ data }: { data: any }) => {
               onClick={(e) => handlePlayMusic(e)}
               className="rounded-full flex justify-center bg-primary hover:bg-amber-600 transition-all  text-white p-2 items-center w-full md:w-40"
             >
-              Play All
+              {showMusicBar ? (
+                <div className="flex items-center gap-3">
+                  <p>Pause</p>
+                  <BsFillPauseCircleFill />
+                </div>
+              ) : (
+                "Play All"
+              )}
             </button>
           </div>
         </div>
@@ -59,7 +66,7 @@ const Details = ({ data }: { data: any }) => {
         <SongDisplay songs={songs} handlePlayMusic={handlePlayMusic} />
       </div>
       {showMusicBar && (
-        <div className="cursor-pointer fixed bottom-0 md:ml-10 bg-slate-100 flex gap-4 w-screen md:w-[50vw] justify-center h-16 items-center">
+        <div className="cursor-pointer fixed bottom-0 md:ml-10 bg-slate-100 flex gap-4 w-screen md:w-[50vw] justify-center h-16 items-center translate-x-0 transition-transform ">
           <BsShuffle />
           <BiSkipPrevious size={30} />
 
