@@ -10,7 +10,7 @@ const SongDisplay = ({
   handlePlayMusic: any;
 }) => {
   return (
-    <table className="  w-full text-sm text-left text-gray-500 ">
+    <table className="  w-full text-sm text-left text-gray-500 overflow-x-hidden ">
       <thead className="text-xs text-gray-900 uppercase ">
         <tr>
           <th scope="col" className=" px-6  py-3">
@@ -22,7 +22,7 @@ const SongDisplay = ({
           <th scope="col" className="px-6 py-3">
             Artist
           </th>
-          <th scope="col" className="px-6 py-3">
+          <th scope="col" className="hidden md:flex px-6 py-3">
             Release
           </th>
         </tr>
@@ -54,7 +54,7 @@ const SongDisplay = ({
                   {song.title}
                 </th>
                 <td className="px-6 py-4">{song.artist_names}</td>
-                <td className="px-6 py-4 ">
+                <td className="hidden md:flex px-6 py-4 ">
                   {song.release_date_for_display
                     ? song.release_date_for_display
                     : "-"}

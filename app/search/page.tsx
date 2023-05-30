@@ -24,7 +24,7 @@ const page = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="w-[400px] md:w-[500px] border-[1px] flex items-center h-14 rounded-md gap-2">
+      <div className="w-[300px] md:w-[500px] border-[1px] flex items-center h-14 rounded-md gap-2">
         <input
           onChange={(e) => setQuery(e.target.value)}
           type="text"
